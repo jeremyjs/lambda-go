@@ -1,6 +1,7 @@
 #lang slideshow
-(require "board.rkt")
+(require file/convertible)
 (require dyoo-while-loop)
+(require "board.rkt")
 
 (define dotsize 6)
 (define num-sq-board 18)
@@ -123,4 +124,9 @@
          (print bpict)
          (print-board b)))
 
-;(start-game)
+(start-game)
+
+;(send (pict->bitmap (new-board-pict))
+;      save-file
+;      "../public/img/board.png"
+;      'png)
