@@ -84,9 +84,7 @@
 (define (add-piece board point color)
   (let ([x (first point)]
         [y (second point)]
-        [circ (if (string=? color "white")
-                  (lambda (size) (disk size #:color "White"))
-                  filled-circle)])
+        [circ (lambda (size) (disk size #:color color))])
     (pin-over board
               (- (* x num-sq-board)
                  (/ piecesize 2))
@@ -96,7 +94,7 @@
   
 (define (start-game)
   (define board (new-board))
-  (define color "black")
+  (define color "Black")
   (print board)
   (while #t
          (define input (read-line))
@@ -104,7 +102,7 @@
            (break))
          (define point (map string->number (string-split input)))
          (set! board (add-piece board point color))
-         (set! color (if (string=? color "black") "white" "black"))
+         (set! color (if (string=? color "Black") "White" "Black"))
          (print board)))
 
 (start-game)
