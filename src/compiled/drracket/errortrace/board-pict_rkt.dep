@@ -1,0 +1,1 @@
+("6.7" ("08154c03d1e32dfb65a18c65feb32b903d25ae4a" . "c60b47a6cfd62e642b05276e4bd2443ec8cc538e") #"/Users/jeremy/code/lambda-go/src/board.rkt" (collects #"dyoo-while-loop" #"main.rkt") (collects #"file" #"convertible.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"slideshow" #"main.rkt"))

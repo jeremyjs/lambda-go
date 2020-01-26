@@ -124,9 +124,9 @@
          (print bpict)
          (print-board b)))
 
-(start-game)
+;(start-game)
 
 ;(send (pict->bitmap (new-board-pict))
 ;      save-file
-;      "../public/img/board.png"
+;      "../public/img/board-1.png"
 ;      'png)

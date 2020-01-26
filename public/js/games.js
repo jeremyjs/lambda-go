@@ -2,18 +2,15 @@ function navigate (url) {
   location.href = url;
 }
 
-function getBtnId (btn) {
-  return $(btn).data('id');
-}
-
 $(function () {
   $('.join').click(function (e) {
-    var id = getBtnId(e.target);
-    navigate('/games/' + id + '/join');
+    var id = $(e.target).data('id');
+    var uid = $('#data').data('uid');
+    navigate('/games/' + id + '/join/' + uid);
   });
 
   $('.watch').click(function (e) {
-    var id = getBtnId(e.target);
-    navigate('/games/' + id);
+    var id = $(e.target).data('id');
+    navigate('/games/' + id + '/watch');
   });
 });
